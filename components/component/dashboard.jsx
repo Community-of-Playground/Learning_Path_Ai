@@ -8,7 +8,7 @@ import { CardContent, Card } from "@/components/ui/card"
 
 export function Dashboard() {
   return (
-    (<div className="flex h-screen bg-[#1a1a1a] text-white">
+    <div className="flex h-screen bg-[#1a1a1a] text-white">
       <aside className="w-64 p-6 space-y-6 bg-[#2c2c2c]">
         <div className="flex items-center space-x-2">
           <HomeIcon className="w-6 h-6" />
@@ -93,19 +93,19 @@ export function Dashboard() {
           <h2 className="text-xl font-bold">Referensi</h2>
           <div className="mt-4 grid grid-cols-3 gap-4">
             <Card className="bg-[#333333]">
-              <CardContent>
+              <CardContent className="flex aspect-square items-center justify-center p-6">
                 <h3 className="font-bold">Digital Marketing: Pengertian dan...</h3>
                 <p className="text-sm">Digital marketing merupakan rangkaian...</p>
               </CardContent>
             </Card>
             <Card className="bg-[#333333]">
-              <CardContent>
+              <CardContent className="flex aspect-square items-center justify-center p-6">
                 <h3 className="font-bold">Digital Marketing: Pengertian dan...</h3>
                 <p className="text-sm">Digital marketing merupakan rangkaian...</p>
               </CardContent>
             </Card>
             <Card className="bg-[#333333]">
-              <CardContent>
+              <CardContent className="flex aspect-square items-center justify-center p-6">
                 <h3 className="font-bold">Digital Marketing: Pengertian dan...</h3>
                 <p className="text-sm">Digital marketing merupakan rangkaian...</p>
               </CardContent>
@@ -116,13 +116,13 @@ export function Dashboard() {
           <h2 className="text-xl font-bold">Resources</h2>
           <div className="mt-4 flex space-x-4">
             <Card className="bg-[#333333] w-1/2">
-              <CardContent>
+              <CardContent className="flex aspect-square items-center justify-center p-6">
                 <h3 className="font-bold">Ultimate Guide to Digital Marketing</h3>
                 <p className="text-sm">.pdf</p>
               </CardContent>
             </Card>
             <Card className="bg-[#333333] w-1/2">
-              <CardContent>
+              <CardContent className="flex aspect-square items-center justify-center p-6">
                 <h3 className="font-bold">Building an Internet Marketing Strategy</h3>
                 <p className="text-sm">.pdf</p>
               </CardContent>
@@ -133,7 +133,7 @@ export function Dashboard() {
           <h2 className="text-xl font-bold">Project Akhir</h2>
           <div className="mt-4 flex space-x-4">
             <Card className="bg-[#333333] w-1/2">
-              <CardContent>
+              <CardContent className="flex aspect-square items-center justify-center p-6">
                 <h3 className="font-bold">SEO Marketing Case Study</h3>
                 <div className="mt-2 flex items-center justify-between">
                   <p className="text-sm">10 Bab</p>
@@ -156,17 +156,17 @@ export function Dashboard() {
             </Card>
             <div className="w-1/2 space-y-4">
               <Card className="bg-[#333333]">
-                <CardContent>
+                <CardContent className="flex aspect-square items-center justify-center p-6">
                   <h3 className="font-bold">More Video</h3>
                   <div className="mt-4 grid grid-cols-2 gap-4">
                     <Card className="bg-[#333333]">
-                      <CardContent>
+                      <CardContent className="flex aspect-square items-center justify-center p-6">
                         <h3 className="font-bold">Video 1</h3>
                         <p className="text-sm">Description of Video 1</p>
                       </CardContent>
                     </Card>
                     <Card className="bg-[#333333]">
-                      <CardContent>
+                      <CardContent className="flex aspect-square items-center justify-center p-6">
                         <h3 className="font-bold">Video 2</h3>
                         <p className="text-sm">Description of Video 2</p>
                       </CardContent>
@@ -175,7 +175,7 @@ export function Dashboard() {
                 </CardContent>
               </Card>
               <Card className="bg-[#333333]">
-                <CardContent>
+                <CardContent className="flex aspect-square items-center justify-center p-6">
                   <h3 className="font-bold">More Resources</h3>
                 </CardContent>
               </Card>
@@ -186,13 +186,13 @@ export function Dashboard() {
       <aside className="w-64 p-6 space-y-6 bg-[#2c2c2c]">
         <div className="space-y-4">
           <Card className="bg-[#333333]">
-            <CardContent>
+            <CardContent className="flex aspect-square items-center justify-center p-6">
               <h3 className="font-bold">Video 1</h3>
               <p className="text-sm">Description of Video 1</p>
             </CardContent>
           </Card>
           <Card className="bg-[#333333]">
-            <CardContent>
+            <CardContent className="flex aspect-square items-center justify-center p-6">
               <h3 className="font-bold">Video 2</h3>
               <p className="text-sm">Description of Video 2</p>
             </CardContent>
@@ -204,13 +204,13 @@ export function Dashboard() {
           </Button>
         </div>
       </aside>
-    </div>)
+    </div>
   );
 }
 
 function BellIcon(props) {
   return (
-    (<svg
+    <svg
       {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -220,17 +220,17 @@ function BellIcon(props) {
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
-      strokeLinejoin="round">
+      strokeLinejoin="round"
+    >
       <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
       <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
-    </svg>)
+    </svg>
   );
 }
-
 
 function CircleUserIcon(props) {
   return (
-    (<svg
+    <svg
       {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -240,18 +240,18 @@ function CircleUserIcon(props) {
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
-      strokeLinejoin="round">
+      strokeLinejoin="round"
+    >
       <circle cx="12" cy="12" r="10" />
       <circle cx="12" cy="10" r="3" />
       <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" />
-    </svg>)
+    </svg>
   );
 }
 
-
 function HomeIcon(props) {
   return (
-    (<svg
+    <svg
       {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -261,9 +261,10 @@ function HomeIcon(props) {
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
-      strokeLinejoin="round">
+      strokeLinejoin="round"
+    >
       <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
       <polyline points="9 22 9 12 15 12 15 22" />
-    </svg>)
+    </svg>
   );
 }
