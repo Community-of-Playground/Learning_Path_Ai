@@ -1,0 +1,45 @@
+"use client"
+import { CollapsibleMessage } from "./collapsible-message"
+
+export function ChatMessages({ messages }) {
+  if (!messages.length) {
+    return null
+  }
+
+  // Group messages based on ID, and if there are multiple messages with the same ID, combine them into one message
+  const groupedMessages = messages.reduce((acc, message) => {
+    if (!acc[message.id]) {
+      acc[message.id] = {
+        id: message.id,
+        components: [],
+        isCollapsed: message.isCollapsed
+      }
+    }
+    acc[message.id].components.push(message.component)
+    return acc
+  }, {})
+
+  // Convert grouped messages into an array with explicit type
+  const groupedMessagesArray = Object.values(groupedMessages).map(group => ({
+    ...group,
+    components: group.components
+  }))
+
+  return (
+    <>
+      {groupedMessagesArray.map(groupedMessage => (
+        <CollapsibleMessage
+          key={`${groupedMessage.id}`}
+          message={{
+            id: groupedMessage.id,
+            component: groupedMessage.components.map((component, i) => (
+              <div key={`${groupedMessage.id}-${i}`}>{component}</div>
+            )),
+            isCollapsed: groupedMessage.isCollapsed
+          }}
+          isLastMessage={groupedMessage.id === messages[messages.length - 1].id}
+        />
+      ))}
+    </>
+  )
+}
